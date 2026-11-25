@@ -60,6 +60,8 @@ Sample printable PDF reports (OWASP AndroGoat):
 - [Executive summary (A4 PDF)](examples/androgoat/huntx-summary.pdf)
 - [Full reconnaissance inventory (PDF)](examples/androgoat/huntx-report.pdf)
 
+[![HUNTX Executive Summary — OWASP AndroGoat](examples/androgoat/huntx-summary.png)](examples/androgoat/huntx-summary.pdf)
+
 ## How it works
 
 - **Manifest and resources.** Pure-Python AXML and `resources.arsc` parsing,
