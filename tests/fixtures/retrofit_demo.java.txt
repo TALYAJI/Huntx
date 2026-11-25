@@ -1,0 +1,13 @@
+package com.demo;
+import retrofit2.http.*;
+public interface Api {
+  @GET("api/v1/users/{id}") Object user(@Path("id") String id, @Query("expand") String e);
+  @POST("/login?mode=fast") Object login(@Body Object b);
+  @HTTP(method="PATCH", path="orders/{oid}", hasBody=true) Object patch(@Path("oid") String o);
+  @DELETE("https://admin.demo.com/v2/sessions") Object kill();
+}
+package com.demo;
+public class Client {
+  String ping(int n) { switch (n) { case 1: return "https://api.demo.com/health"; case 900: return "x"; default: return null; } }
+}
+package retrofit2.http; import java.lang.annotation.*; @Retention(RetentionPolicy.RUNTIME) public @interface HTTP { String method(); String path() default ""; boolean hasBody() default false; }
